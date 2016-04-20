@@ -1,0 +1,2 @@
+addpath( './omp' );
+addpath( './gpb' );

@@ -1,0 +1,19 @@
+The NYU Depth Dataset (v2) is from Silberman et al and is available at:
+
+http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
+
+Run the script convert_dataset.m to download the dataset, reduce the resolution
+to half (320x240), clean up some "double contours" in the groundtruth, and save
+them in the Berkeley Segmentation Benchmark (BSDS) format. Once in BSDS format,
+it is easy to modify the Berkeley gPb benchmarking code to point to the new
+dataset locations. The data is split into 60% training and 40% test, randomly.
+
+"Double contours" refer to minor artifacts in the NYU groundtruth where the
+labels are given as semantic regions, not scene segmentations. Thus
+occassionally a thin strip of unlabeled pixels exist between two regions that
+should be adjacent, and it is a problem for a boundary/segmentation evaluation.
+We have a simple median filtering step to remedy the issue.
+
+seg2bdry.m is from the Berkeley gPb software.
+mediannan_int.m is modified from the code shown at http://www.mathworks.com/matlabcentral/newsreader/view_thread/251787.
+

@@ -1,0 +1,17 @@
+
+Functions needed from gPb to run the global version of SCG:
+
+applyFilter.m
+buildW.mexa64
+fbRun.m
+fitparab.m
+isum.m
+mex_nonmax_oriented.mexa64
+nonmax_channels.m
+nonmax_oriented.m
+oeFilter.m
+padReflect.m
+RGB2Lab.m
+savgol_border.mexa64
+spectralPb.m
+
